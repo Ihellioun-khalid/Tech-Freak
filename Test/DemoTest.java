@@ -23,10 +23,17 @@ class DemoTest {
 		Demo demo =new Demo();
 		String a = "test";
 		String b = "Test";
-//		assertTrue(demo.compareStringIgnoreCase(a, b));
-//		assertTrue(a+" est "+b+"ne sont pas egaux",demo.compareStringIgnoreCase(a,b));
-//		assertFalse(!demo.compareStringIgnoreCase(a, b));
+		assertTrue(demo.compareStringIgnoreCase(a, b));
+		assertTrue(a+" est "+b+"ne sont pas egaux",demo.compareStringIgnoreCase(a,b));
+		assertFalse(!demo.compareStringIgnoreCase(a, b));
 		assertFalse(a+" est "+b+" sont pas egaux",!demo.compareStringIgnoreCase(a,b));
 	}
-
+	@Test
+	void testconcatString() {
+		Demo demo =new Demo();
+		String a = "Hello ";
+		String b = "world";
+		String c ="Hello world";
+		assertEquals(c, demo.concatString(a,b));
+	}	
 }

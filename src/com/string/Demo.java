@@ -8,4 +8,7 @@ public class Demo {
 		}
 		return false;	
 	}
+	public String concatString(String first,String second) {
+		return first.concat(second);	
+	}
 }
