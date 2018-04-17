@@ -35,5 +35,12 @@ class DemoTest {
 		String b = "world";
 		String c ="Hello world";
 		assertEquals(c, demo.concatString(a,b));
-	}	
+	}
+	@Test
+	void testaddOneToArray() {
+		Demo demo =new Demo();
+		int[]a=new int[] {3,8};
+		int[]b=new int[] {2,7};
+		assertArrayEquals(a, demo.addOneToArray(b));
+	}
 }
