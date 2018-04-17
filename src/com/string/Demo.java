@@ -27,4 +27,8 @@ public class Demo {
 		}
 		System.out.println("=====Finish====");
 	}
+	public void exception(int number) {
+		int result=10/number;
+		System.out.println("Result ==>"+result);
+	}
 }
