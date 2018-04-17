@@ -21,4 +21,10 @@ public class Demo {
 		}
 		return output;
 	}
+	public void performance() {
+		for (int i = 0; i < 1000000; i++) {
+			
+		}
+		System.out.println("=====Finish====");
+	}
 }

@@ -1,25 +1,13 @@
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import com.string.Demo;
 
-class DemoTest {
-
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-	}
+public class DemoTest {
 
 	@Test
-	void testcompareStringIgnoreCase() {
+	public void testcompareStringIgnoreCase() {
 		Demo demo =new Demo();
 		String a = "test";
 		String b = "Test";
@@ -29,7 +17,7 @@ class DemoTest {
 		assertFalse(a+" est "+b+" sont pas egaux",!demo.compareStringIgnoreCase(a,b));
 	}
 	@Test
-	void testconcatString() {
+	public void testconcatString() {
 		Demo demo =new Demo();
 		String a = "Hello ";
 		String b = "world";
@@ -37,10 +25,15 @@ class DemoTest {
 		assertEquals(c, demo.concatString(a,b));
 	}
 	@Test
-	void testaddOneToArray() {
+	public void testaddOneToArray() {
 		Demo demo =new Demo();
 		int[]a=new int[] {3,8};
 		int[]b=new int[] {2,7};
 		assertArrayEquals(a, demo.addOneToArray(b));
+	}
+	@Test(timeout =10)
+	public void testperformance() {
+		Demo demo =new Demo();
+		 demo.performance();
 	}
 }
