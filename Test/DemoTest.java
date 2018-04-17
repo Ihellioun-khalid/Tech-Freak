@@ -20,7 +20,8 @@ class DemoTest {
 	@Test
 	void test() {
 		Demo demo =new Demo();
-		assertTrue(demo.compareStringIgnoreCase("hello", "Hello"));
+//		assertTrue(demo.compareStringIgnoreCase("hello", "Hello"));
+		assertTrue("hello and Helo not failed",demo.compareStringIgnoreCase("hello", "Hello"));
 	}
 
 }
