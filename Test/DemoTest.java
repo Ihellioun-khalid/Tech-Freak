@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,10 +19,14 @@ class DemoTest {
 	}
 
 	@Test
-	void test() {
+	void testcompareStringIgnoreCase() {
 		Demo demo =new Demo();
-//		assertTrue(demo.compareStringIgnoreCase("hello", "Hello"));
-		assertTrue("hello and Helo not failed",demo.compareStringIgnoreCase("hello", "Hello"));
+		String a = "test";
+		String b = "Test";
+//		assertTrue(demo.compareStringIgnoreCase(a, b));
+//		assertTrue(a+" est "+b+"ne sont pas egaux",demo.compareStringIgnoreCase(a,b));
+//		assertFalse(!demo.compareStringIgnoreCase(a, b));
+		assertFalse(a+" est "+b+" sont pas egaux",!demo.compareStringIgnoreCase(a,b));
 	}
 
 }
